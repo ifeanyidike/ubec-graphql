@@ -1,0 +1,98 @@
+type Query{
+    assessments: [Assessment]
+    assessment(_id: ID!): Assessment
+    assessmentBySubject(subjectId: ID!): Assessment
+    subjects: [Subject]
+    subject(_id: ID!): Subject
+    subjectByName(name: String): Subject
+    schools: [School]
+    school(_id: ID!): School
+    students: [Student]
+    student(_id: ID!): Student
+    teachers: [Teacher]
+    teacher(_id: ID!): Teacher
+    studentsLogin(school: ID!, studentCode: String!): StudentLoginOutput
+    teachersLogin(school: ID!, username: String!, teacherCode: String!): TeacherLoginOutput
+}
+
+type Mutation{
+    createSubject(name: String!): Subject
+    createAssessment(subjectId: ID! ): Assessment
+    addQuestions(assessmentId: ID!, question: String!, options: [String!]!, answer: String): Entry
+    createSchool(schoolCode: String!, schoolName: String!): School
+    createStudent(school: ID!, name: String!, age: Int!, sex: String!, class: String!, studentCode: String!, subjects: [String]!): Student
+    updateStudent(_id: ID!, school: ID, name: String, age: Int, sex: String, class: String, studentCode: String, subjects: [String]): Student
+    createTeacher(school: ID!, username: String!, class: String!, name: String!, teacherCode: String!, subjects: [String]!): Teacher
+    updateTeacher(_Id: ID!, username: String, school: ID, class: String, name: String, teacherCode: String!, subjects: [String]): Teacher
+}
+
+# Subject Schema Defs
+type Subject{
+    _id: ID!,
+    name: String!
+}
+
+#Assessment schema defs
+type Assessment{
+    _id: ID!,
+    subject: ID!,
+    questions: [Entry]
+}
+
+type Entry{
+    _id: ID!,
+    question: String!,
+    options: [String]!,
+    answer: String!
+}
+
+#School schema defs
+type School{
+    _id: ID!,
+    schoolCode: String!,
+    schoolName: String!
+}
+
+#Student schema defs
+type Student{
+    _id: ID!,
+    school: ID!,
+    name: String!,
+    sex: String!,
+    age: Int!,
+    class: String!,
+    studentCode: String!,
+    subjects: [String]!
+}
+
+type StudentLoginOutput{
+    _id: ID!,
+    school: ID!,
+    name: String!,
+    sex: String!,
+    age: Int!,
+    class: String!,
+    subjects: [String]!,
+    token: String!
+}
+
+#Teacher schema def
+type Teacher{
+    _id: ID!,
+    school: ID!,
+    class: String!,
+    username: String!,
+    name: String!,
+    teacherCode: String!,
+    subjects: [String]!
+}
+
+type TeacherLoginOutput{
+    _id: ID!,
+    school: ID!,
+    class: String!,
+    username: String!,
+    name: String!,
+    subjects: [String]!,
+    token: String!
+}

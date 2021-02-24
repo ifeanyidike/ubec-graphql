@@ -1,0 +1,12 @@
+import { gql } from 'apollo-server-express'
+
+export const subjectSchema = gql`
+    type Subject{
+        _id: ID!,
+        name: String
+    }
+
+    type Query{
+        hello: String
+    }
+`
