@@ -10,7 +10,7 @@ const slider = () => (
 
                 <div className="carousel__text">
                     <h3>Ministers Goodwill Message</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem, explicabo ratione dolorem suscipit corporis sit pariatur perspiciatis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem!</p>
                     <p className='carousel__message_2'>Distinctio deserunt earum nostrum magni ab laboriosam placeat ullam!</p>
                 </div>
 
@@ -19,7 +19,7 @@ const slider = () => (
 
                 <div className="carousel__text">
                     <h3>ES Goodwill Message</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem, explicabo ratione dolorem suscipit corporis sit pariatur perspiciatis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iusto esse, minima, exercitationem!</p>
                     <p className='carousel__message_2'>Distinctio deserunt earum nostrum magni ab laboriosam placeat ullam!</p>
                 </div>
             </div>

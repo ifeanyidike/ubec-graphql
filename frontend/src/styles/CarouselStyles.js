@@ -32,6 +32,10 @@ export const CarouselContainer = styled.div`
                 width: 35%;
                 color: ${colors.white};
                 margin-right: 100px;
+                @media ${device.tablet_md}{
+                    display: none
+                }
+
                 h3{
                     font-size: 1.5rem;
                     margin-bottom: 20px;
@@ -44,7 +48,7 @@ export const CarouselContainer = styled.div`
                 }
 
                 @media ${device.tablet}{
-                    margin-right: 60px;
+                    margin-right: 50px;
                     p{
                         font-weight: 500;
                     }

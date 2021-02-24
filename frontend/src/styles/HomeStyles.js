@@ -3,4 +3,5 @@ import { device, colors, defaultMargin } from "../utils/definitions"
 
 export const HomeContainer = styled.div`
     padding-top: ${defaultMargin};
+    overflow-x: hidden;
 `

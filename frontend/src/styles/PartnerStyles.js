@@ -12,10 +12,10 @@ export const PartnerContainer = styled.div`
     }
     .content{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         flex-wrap: wrap;
         img{
-            height: 70px;  
+            height: 50px;  
         }
     }
 `
